@@ -12,20 +12,20 @@ For more information about why Test Bench was created and the reasoning behind i
 
 === Quick Start Guide
 
-Before getting started, I recommend skimming through the documentation referenced after this guide. Afterwards, to get started with Test Bench, either install the +test_bench+ gem on your local system or add it to a project you'd like to use Test Bench with.
+Before getting started, I recommend skimming through the documentation referenced after this guide. Afterwards, to get started with Test Bench, either install the +test_bench_legacy+ gem on your local system or add it to a project you'd like to use Test Bench with.
 
 To install the gem locally:
 
 [source]
 ----
-# gem install test_bench
+# gem install test_bench_legacy
 ----
 
 Or, to add it to the project via Bundler:
 
 [source]
 ----
-gem 'test_bench'
+gem 'test_bench_legacy'
 ----
 
 Second, write a test loader, e.g. +tests/test_helper+:
@@ -35,7 +35,7 @@ Second, write a test loader, e.g. +tests/test_helper+:
 # Begin tests/test_helper.rb
 
 # Load Test Bench and then activate it
-require 'test_bench/activate'
+require 'test_bench_legacy/activate'
 
 # Load the code under test
 require_relative '../lib/my/code.rb'
@@ -66,7 +66,7 @@ end
 # End tests/some_test_file.rb
 ----
 
-Now, if you want to run that test file, just load it through the ruby executable, e.g. +ruby tests/some_test_file.rb+. If you want to run all the tests in the +tests/+ directory, the +bench+ executable that ships with the +test_bench+ gem can do just that:
+Now, if you want to run that test file, just load it through the ruby executable, e.g. +ruby tests/some_test_file.rb+. If you want to run all the tests in the +tests/+ directory, the +bench+ executable that ships with the +test_bench_legacy+ gem can do just that:
 
 [source]
 ----
@@ -74,6 +74,7 @@ Now, if you want to run that test file, just load it through the ruby executable
 ----
 
 That will get you started, though it's a good idea to read through all the documentation. Also, that +bench+ executable offers a few useful options, so be sure to check out the help via +bench --help+. Finally, Test Bench's test suite itself serves as an example for reference.
+
 
 === Documentation Links
 
